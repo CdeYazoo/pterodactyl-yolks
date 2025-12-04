@@ -4,11 +4,11 @@ name: Publish Docker Image to GHCR
       push:
         branches:
           - main
+       workflow-dispatch:
 
     jobs:
       build-and-push:
         runs-on: ubuntu-latest
-        workflow-dispatch:
         steps:
           - name: Checkout repository
             uses: actions/checkout@v4
